@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MakeMyTrip Clone</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: #f2f2f2;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #003580;
+            padding: 15px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+
+        .navbar h1 {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 14px;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                        url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
+            background-size: cover;
+            background-position: center;
+            height: 350px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .hero h2 {
+            font-size: 40px;
+        }
+
+        /* Booking Section */
+        .booking-box {
+            background: white;
+            width: 85%;
+            margin: -60px auto 40px;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+
+        .tabs button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #f2f2f2;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+
+        .tabs button.active {
+            background-color: #003580;
+            color: white;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .form-row input {
+            flex: 1;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .search-btn {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .search-btn button {
+            background-color: #ff5a5f;
+            color: white;
+            border: none;
+            padding: 12px 40px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .search-btn button:hover {
+            background-color: #e04848;
+        }
+
+        /* Offers Section */
+        .offers {
+            width: 85%;
+            margin: 30px auto;
+        }
+
+        .offers h3 {
+            margin-bottom: 20px;
+        }
+
+        .offer-cards {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: white;
+            padding: 15px;
+            border-radius: 6px;
+            width: 30%;
+            min-width: 250px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 6px;
+        }
+
+        .card h4 {
+            margin-top: 10px;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #003580;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        @media(max-width:768px){
+            .form-row {
+                flex-direction: column;
+            }
+
+            .card {
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <h1>MakeMyTrip</h1>
+        <div class="nav-links">
+            <a href="#">Flights</a>
+            <a href="#">Hotels</a>
+            <a href="#">Trains</a>
+            <a href="#">Buses</a>
+            <a href="#">Login</a>
+        </div>
+    </div>
+
+    <!-- Hero -->
+    <div class="hero">
+        <h2>Book Domestic & International Flights</h2>
+    </div>
+
+    <!-- Booking Box -->
+    <div class="booking-box">
+
+        <div class="tabs">
+            <button class="active">Flights</button>
+            <button>Hotels</button>
+            <button>Trains</button>
+            <button>Buses</button>
+        </div>
+
+        <div class="form-row">
+            <input type="text" placeholder="From">
+            <input type="text" placeholder="To">
+            <input type="date">
+            <input type="date">
+        </div>
+
+        <div class="search-btn">
+            <button>Search</button>
+        </div>
+
+    </div>
+
+    <!-- Offers -->
+    <div class="offers">
+        <h3>Best Offers</h3>
+        <div class="offer-cards">
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
+                <h4>Goa Special</h4>
+                <p>Enjoy beaches with 30% off on flights.</p>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b">
+                <h4>Dubai Deal</h4>
+                <p>Flat ₹5000 off on international bookings.</p>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d">
+                <h4>Mountain Escape</h4>
+                <p>Special discounts on hill station hotels.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        © 2026 MakeMyTrip Clone | Designed for Learning
+    </div>
+
+</body>
+</html>
